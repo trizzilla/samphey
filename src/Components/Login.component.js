@@ -42,7 +42,10 @@ const Login = () => {
       </form>
       <footer>
         <h3>Don't have an account? </h3>
-        <Link to="/register">Register</Link>
+        <div>
+          <Link to="/register">Register</Link>
+        </div>
+        <Link to="nav">Nav</Link>
       </footer>
     </div>
   );
