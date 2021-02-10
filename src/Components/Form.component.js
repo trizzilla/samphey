@@ -21,6 +21,7 @@ const RegistrationFrom = () => {
       <form onSubmit={handleFormSubmit} className="add-form form-control">
         <label>First Name:</label>
         <input
+          required
           type="text"
           placeholder="first name"
           value={firstName}
@@ -28,6 +29,7 @@ const RegistrationFrom = () => {
         />
         <label>Last Name: </label>
         <input
+          required
           type="text"
           placeholder="first name"
           value={lastName}
@@ -35,6 +37,7 @@ const RegistrationFrom = () => {
         />
         <label>Email: </label>
         <input
+          required
           type="email"
           placeholder="Email@email.co"
           value={email}
@@ -42,6 +45,7 @@ const RegistrationFrom = () => {
         />
         <label>Password: </label>
         <input
+          required
           type="password"
           placeholder="Password"
           value={password}
@@ -49,6 +53,7 @@ const RegistrationFrom = () => {
         />
         <label>Password: </label>
         <input
+          required
           type="password"
           placeholder="Password"
           value={rePassword}

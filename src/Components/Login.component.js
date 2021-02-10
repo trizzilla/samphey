@@ -21,6 +21,7 @@ const Login = () => {
       <form onSubmit={handleLoginSubmit} className="add-form form-control">
         <label>User Name: </label>
         <input
+          required
           type="text"
           placeholder="name/id"
           value={text}
@@ -28,6 +29,7 @@ const Login = () => {
         />
         <label>Password: </label>
         <input
+          required
           type="password"
           placeholder="password"
           value={password}
