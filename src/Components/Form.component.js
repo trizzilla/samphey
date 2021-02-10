@@ -1,12 +1,14 @@
 import { useState } from "react";
 
 const RegistrationFrom = () => {
+  //state for each one of them
   const [firstName, setFirstname] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [rePassword, setRePassword] = useState("");
 
+  //-- add functionality --\\
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(e, "REGISTRATION FORM HAS BEEN SUBMITED samphey jeda");

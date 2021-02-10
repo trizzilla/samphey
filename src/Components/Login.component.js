@@ -3,9 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  //state for each
   const [text, setText] = useState("");
   const [password, setPassword] = useState("");
 
+  //--HERE--\\
+
+  //-- add functionality --\\
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log("LOGIN FORM HAS BEEN SUMITED", e);
