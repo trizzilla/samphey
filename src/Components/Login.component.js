@@ -16,8 +16,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleLoginSubmit}>
+    <div className="container">
+      <form onSubmit={handleLoginSubmit} className="add-form form-control">
         <label>User Name: </label>
         <input
           type="text"
@@ -34,12 +34,13 @@ const Login = () => {
             setPassword(e.target.value, console.log(e.target.value))
           }
         />
-        <label>Submit</label>
+
         <input type="submit" />
       </form>
-
-      <h3>Don't have an account? </h3>
-      <Link to="/register">Register</Link>
+      <footer>
+        <h3>Don't have an account? </h3>
+        <Link to="/register">Register</Link>
+      </footer>
     </div>
   );
 };

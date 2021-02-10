@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const RegistrationFrom = () => {
   //state for each one of them
@@ -15,8 +16,8 @@ const RegistrationFrom = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
+    <div className="container">
+      <form onSubmit={handleFormSubmit} className="add-form form-control">
         <label>First Name:</label>
         <input
           type="text"
@@ -34,7 +35,7 @@ const RegistrationFrom = () => {
         <label>Email: </label>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email@email.co"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -52,9 +53,10 @@ const RegistrationFrom = () => {
           value={rePassword}
           onChange={(e) => setRePassword(e.target.value)}
         />
-        <label>Submit</label>
+
         <input type="submit" />
       </form>
+      <Link to="/">Login</Link>
     </div>
   );
 };
