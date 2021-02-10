@@ -5,10 +5,12 @@ import Login from "./Components/Login.component";
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-      <RegistrationFrom />
-    </div>
+    <Router>
+      <div className="App">
+        <Route path="/" component={Login} />
+        <Route path="/register" component={RegistrationFrom} />
+      </div>
+    </Router>
   );
 }
 
