@@ -38,7 +38,7 @@ const Login = () => {
           }
         />
 
-        <input type="submit" />
+        <input type="submit" className="btn" />
       </form>
       <footer>
         <h3>Don't have an account? </h3>

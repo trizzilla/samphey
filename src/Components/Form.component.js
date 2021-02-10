@@ -60,7 +60,7 @@ const RegistrationFrom = () => {
           onChange={(e) => setRePassword(e.target.value)}
         />
 
-        <input type="submit" />
+        <input type="submit" className="btn" />
       </form>
       <footer>
         <h3>Have an Acc? </h3>

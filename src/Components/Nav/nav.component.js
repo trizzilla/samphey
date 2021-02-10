@@ -6,6 +6,7 @@ import { FaBars } from "react-icons/fa";
 import { links, social } from "./data.navbar";
 
 import "./nav.style.css";
+import NavCom from "../withinNav/withinNav.component";
 
 const NavApp = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -64,8 +65,13 @@ const NavApp = () => {
       </nav>
       <div style={{ textAlign: "center" }}>
         <h3>Go back </h3>
-        <Link to="/">SHUUU!!!</Link>
+        <Link to="/">
+          <button className="btn">SHUUU!!!</button>
+        </Link>
       </div>
+      <footer>
+        <NavCom />
+      </footer>
     </>
   );
 };
