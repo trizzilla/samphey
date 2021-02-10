@@ -17,6 +17,7 @@ const RegistrationFrom = () => {
 
   return (
     <div className="container">
+      <h3 style={{ textAlign: "center" }}> REGISTER</h3>
       <form onSubmit={handleFormSubmit} className="add-form form-control">
         <label>First Name:</label>
         <input
@@ -56,7 +57,10 @@ const RegistrationFrom = () => {
 
         <input type="submit" />
       </form>
-      <Link to="/">Login</Link>
+      <footer>
+        <h3>Have an Acc? </h3>
+        <Link to="/">Login</Link>
+      </footer>
     </div>
   );
 };

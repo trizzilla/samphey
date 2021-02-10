@@ -17,6 +17,7 @@ const Login = () => {
 
   return (
     <div className="container">
+      <h3 style={{ textAlign: "center" }}> Login</h3>
       <form onSubmit={handleLoginSubmit} className="add-form form-control">
         <label>User Name: </label>
         <input
