@@ -1,13 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "./CustomHook/form.custom";
 
 const RegistrationFrom = () => {
   //state for each one of them
-  const [firstName, setFirstname] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [rePassword, setRePassword] = useState("");
+  //adding a custom hook
+  const [values, handleChange] = useForm({
+    email: "",
+    password: "",
+    firstname: "",
+    lastname: "",
+    rePassword: "",
+  });
+  // const [firstName, setFirstname] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [rePassword, setRePassword] = useState("");
 
   //-- add functionality --\\
   const handleFormSubmit = (e) => {
@@ -23,41 +32,46 @@ const RegistrationFrom = () => {
         <input
           required
           type="text"
+          name="firstname"
           placeholder="first name"
-          value={firstName}
-          onChange={(e) => setFirstname(e.target.value)}
+          value={values.firstName}
+          onChange={handleChange}
         />
         <label>Last Name: </label>
         <input
           required
           type="text"
-          placeholder="first name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          name="lastname"
+          placeholder="last name"
+          value={values.lastName}
+          onChange={handleChange}
         />
         <label>Email: </label>
         <input
           required
           type="email"
+          name="email"
           placeholder="Email@email.co"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={values.email}
+          onChange={handleChange}
         />
         <label>Password: </label>
         <input
           required
           type="password"
+          name="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={values.password}
+          onChange={handleChange}
         />
         <label>Password: </label>
         <input
           required
           type="password"
+          name="rePassword"
           placeholder="Password"
-          value={rePassword}
-          onChange={(e) => setRePassword(e.target.value)}
+          value={values.rePassword}
+          onChange={handleChange}
         />
 
         <input type="submit" className="btn" />
